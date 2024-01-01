@@ -31,3 +31,15 @@ result2 = heap[0]
 print(f"heap[0] : {result2}")
 print(f"heap : {heap}")
 print()
+
+# 최대힙 만들기
+heap_items = [1, 3, 5, 7, 9]
+
+max_heap = []
+for item in heap_items:
+    heapq.heappush(max_heap, (-item, item))
+
+print(f"max_heap : {max_heap}")
+
+max_item = heapq.heappop(max_heap)[1]
+print(f"max_item : {max_item}")
